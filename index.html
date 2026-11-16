@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Projektstatus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="wrap">
+
+    <h1 id="title">Indlæser...</h1>
+    <p id="customer"></p>
+
+    <!-- Progress bar -->
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+    <div id="percent"></div>
+
+    <!-- Milestones -->
+    <div class="card">
+        <h2>Milepæle</h2>
+        <div id="milestones"></div>
+    </div>
+
+    <!-- Waiting on customer -->
+    <div class="card waiting" id="waiting-box">
+        <h2>Venter på dig</h2>
+        <div id="waiting"></div>
+    </div>
+
+    <a id="preview" target="_blank">Se preview</a>
+
+    <!-- Updates -->
+    <div class="card">
+        <h2>Seneste opdateringer</h2>
+        <div id="updates"></div>
+    </div>
+
+</main>
+
+<script src="index.js"></script>
+</body>
+</html>

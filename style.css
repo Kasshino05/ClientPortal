@@ -1,0 +1,73 @@
+:root {
+    --bg: #0f1420;
+    --card: #182030;
+    --text: #e6e9ef;
+    --muted: #8a93a6;
+    --accent: #3b82f6;
+}
+
+body {
+    margin: 0;
+    font-family: "inter", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress {
+    height: 12px;
+    background: var(--card);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress .bar {
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.6s;
+}
+
+/* ===== MILESTONES ===== */
+.step {
+    padding: 8px 0;
+    color: var(--muted);
+}
+
+.step.done {
+    color: var(--accent);
+}
+
+/* ===== WAITING BOX ===== */
+.waiting {
+    border-left: 4px solid #f59e0b;
+}
+
+/* ===== UPDATES ===== */
+.update {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--bg);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+    .wrap {
+        padding: 20px 12px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+}
