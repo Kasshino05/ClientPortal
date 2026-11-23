@@ -1,5 +1,9 @@
 <?php
-// Edit one project: edit-project.php?id=3
+session_start();
+if (!isset($_SESSION['logged_in'])) {
+    header('Location: login.php');
+    exit;
+}
 
 $pdo = require __DIR__ . '/../api/db.php';
 $id = (int) $_GET['id'];

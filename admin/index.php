@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['logged_in'])) {
+    header('Location: login.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -15,6 +22,7 @@
         <nav>
             <a href="index.php" class="active">Dashboard</a>
             <a href="new-project.php">Nyt projekt</a>
+            <a href="logout.php">Log ud</a>
         </nav>
     </aside>
 

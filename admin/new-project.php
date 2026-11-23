@@ -1,4 +1,11 @@
 <?php
+session_start();
+if (!isset($_SESSION['logged_in'])) {
+    header('Location: login.php');
+    exit;
+}
+?>
+<?php
 // Create a new project. Saving needs the database (later).
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -36,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <nav>
             <a href="index.php">Dashboard</a>
             <a href="new-project.php" class="active">Nyt projekt</a>
+            <a href="logout.php">Log ud</a>
         </nav>
     </aside>
 
